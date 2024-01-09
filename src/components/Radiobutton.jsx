@@ -14,6 +14,7 @@ export const Radiobutton = ({register}) => {
                   row
                   aria-labelledby="row-radio-buttons-group-label"
                   name="gender"
+                  defaultValue="female"
               >
                  <FormControlLabel value="female" control={<Radio {...register('gender')} />} label="Female" />
                   <FormControlLabel value="male" control={<Radio {...register('gender')} />} label="Male" />

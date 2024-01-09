@@ -13,7 +13,7 @@ import Phonenumbercomponent from './components/Phonenumbercomponent';
 
     return(
       <div className='form_container'>
-        <Grid style={{borderBlockStyle:'solid' ,padding:'5px', background:''}}>
+        <Grid style={{borderBlockStyle:'solid' ,padding:'4px', background:''}}>
           <Typography variant="h4" align="center" gutterBottom padding={2}>
             Registration
           </Typography>

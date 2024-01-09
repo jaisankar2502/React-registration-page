@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+  import './App.css';
+  import { Textbox } from './components/Textbox';
+  import SubmitButton from './components/SubmitButton';
+  import { Radiobutton } from './components/Radiobutton';
+  import {  Formdropdowns } from './components/Formdropdowns';
+  import { Grid, Typography} from '@mui/material';
+  import { useForm } from "react-hook-form";
+import Phonenumbercomponent from './components/Phonenumbercomponent';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  function App() {
+    const { register, control, handleSubmit, formState: { errors } } = useForm({ shouldUseNativeValidation: true});
+    const onSubmit = data => console.log("hello",data);
 
-export default App;
+    return(
+      <div className='form_container'>
+        <Grid style={{borderBlockStyle:'solid' ,padding:'5px', background:''}}>
+          <Typography variant="h4" align="center" gutterBottom padding={2}>
+            Registration
+          </Typography>
+          <form onSubmit={handleSubmit(onSubmit)} >
+            < Textbox register={register} />
+            <Phonenumbercomponent register={register} />
+            <Formdropdowns register={register} />
+            <Radiobutton register={register} />
+            <SubmitButton />
+          </form>
+          
+        </Grid>
+      </div>
+  
+    ) 
+  
+  }
+
+  export default App;

@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+.form_container{
+  max-width: 400px;
+  margin: 0 auto;
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 5%;
+    transform: translate(-50%, -50%);
+}
